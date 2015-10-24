@@ -4,7 +4,6 @@ class Ckeditor::Picture < Ckeditor::Asset
                     :storage => :s3,
                     :path => "/:class/:id/:style/:filename",
                     :s3_credentials => "#{Rails.root}/config/s3.yml",
-                    :default_url => '/images/defaults/noavatar.svg',
                     :url => ':s3_domain_url'
 
   validates_attachment_presence :data
